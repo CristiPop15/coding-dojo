@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.assignment.spring.ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.285 s <<< FAILURE! - in com.assignment.spring.ApplicationTests
+contextLoads(com.assignment.spring.ApplicationTests)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openWeatherClient' defined in file [/Users/popananda/Downloads/test java/coding-dojo-spring-boot/target/classes/com/assignment/spring/api/client/OpenWeatherClient.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openWeatherClientConfig' defined in file [/Users/popananda/Downloads/test java/coding-dojo-spring-boot/target/classes/com/assignment/spring/api/client/config/OpenWeatherClientConfig.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'api-key' in value "${api-key}"
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openWeatherClientConfig' defined in file [/Users/popananda/Downloads/test java/coding-dojo-spring-boot/target/classes/com/assignment/spring/api/client/config/OpenWeatherClientConfig.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'api-key' in value "${api-key}"
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'api-key' in value "${api-key}"
+

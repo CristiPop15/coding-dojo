@@ -1,0 +1,31 @@
+server:
+  port: 8089
+
+weather:
+  app:
+    id: ${api-key}
+
+client:
+  rest:
+    weather:
+      url: http://api.openweathermap.org/data/2.5/weather
+
+spring:
+  datasource:
+    url: ${db-url}
+    username: ${db-username}
+    password: ${db-password}
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    show-sql: false
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
